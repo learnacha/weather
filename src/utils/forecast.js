@@ -19,11 +19,12 @@ const forecast = (lat, long, callback) => {
             return;
         }
 
-        const { current: {temperature, feelslike, weather_descriptions}} = body;
+        const { current: {temperature, feelslike, weather_descriptions, humidity}} = body;
         callback(undefined, {
             temperature,
             feelslike,
-            weather_descriptions
+            weather_descriptions,
+            humidity
         })
     })
 }
